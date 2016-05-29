@@ -1,0 +1,122 @@
+# basic .muttrc for use with Gmail
+#default account gmail
+source "gpg2 -dq $HOME/.my-pwds.gpg |"
+source ~/.config/mutt/gmail
+
+# mailcap settings
+auto_view text/html
+
+# alias settings
+set alias_file=~/.alias_list
+source $alias_file
+
+
+# # Change the following line to a different editor you prefer.
+#set editor = "nano -t"
+#set editor = "vim -c 'set tw=80 ft=mail' -c 'set wrap' -c 'set nocp'"
+set editor="vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
+set text_flowed=yes
+
+# Basic config
+set imap_check_subscribed=yes
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+set pager_index_lines = 10
+set beep_new = yes
+set markers = no #removes + sign from wrapped lines
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+bind editor <space> noop
+
+# Sidebar Patch --------------------------------------
+set sidebar_delim   = '│'
+#set sidebar_visible = yes
+set sidebar_width   = 24
+color sidebar_new brightyellow default
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+
+
+
+#color settings
+
+color hdrdefault cyan default
+color attachment yellow default
+
+color header brightyellow default "From: "
+color header brightyellow default "Subject: "
+color header brightyellow default "Date: "
+
+color quoted green default
+color quoted1 cyan default
+color quoted2 green default
+color quoted3 cyan default
+
+color error     red             default         # error messages
+color message   white           default         # message  informational messages
+color indicator white           red             # indicator for the "current message"
+color status    white           blue            # status lines in the folder index sed for the mini-help line
+color tree      green           default         # the "tree" display of threads within the folder index
+color search    white           blue            # search matches found with search within the internal pager
+color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
+
+color index     yellow default  '~O'
+color index     yellow default  '~N'
+color index     brightred       default '~F'    # Flagged Messages are important!
+color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
+
+
+# url viewing
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# misc
+bind index,pager R "group-reply"
+bind index <tab> sync-mailbox
+bind index gg first-entry
+
+#multiple account bindings
+macro index,pager <f2> "<sync-mailbox><enter-command>source ~/.config/mutt/gmail<enter><change-folder>!<enter>"
+macro index,pager <f3> "<sync-mailbox><enter-command>source ~/.config/mutt/cantab<enter><change-folder>!<enter>"
+macro index,pager <f4> "<sync-mailbox><enter-command>source ~/.config/mutt/icloud<enter><change-folder>!<enter>"
+macro index,pager <f5> "<sync-mailbox><enter-command>source ~/.config/mutt/cwru<enter><change-folder>!<enter>"
+
+
+
+#hooks to load multiple accounts
+folder-hook 'gmail.com' 'source ~/.config/mutt/gmail'
+folder-hook 'cantab.net' 'source ~/.config/mutt/cantab'
+folder-hook 'icloud.com' 'source ~/.config/mutt/icloud'
+folder-hook 'case.edu' 'source ~/.config/mutt/cwru'
+
+# mutt sidebar settings
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+
+#forwarding settings
+unset mime_forward                   # forward attachments as part of body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
