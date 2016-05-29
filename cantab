@@ -1,0 +1,24 @@
+#cantab email
+
+#reset to correct folder and mailboxes
+set folder = "imaps://mail.secure.aluminati.net:993"
+set spoolfile = "+INBOX"
+set imap_user = "nicolas.haigh@cantab.net"
+set imap_pass = $my_pw_cantab
+set smtp_url = "smtp://nicolas.haigh@cantab.net@mail.secure.aluminati.net:587"
+set smtp_pass = $my_pw_cantab
+
+set record = "+Sent Messages"
+set realname = "Nicolas Haigh"
+set from = "nicolas.haigh@cantab.net"
+set hostname = "cantab.net"
+set postponed = "=Drafts"
+set trash="=Trash"
+
+#set ssl_force_tls = yes
+#set ssl_starttls = yes
+
+mailboxes =Inbox =Drafts =Trash
+
+#configures status bar to display inbox name
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───cantab"

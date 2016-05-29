@@ -1,0 +1,26 @@
+#iCloud
+#receive
+set imap_user = "nicolashaigh@me.com"
+set imap_pass = $my_pw_icloud
+set folder = "imaps://nicolashaigh@imap.mail.me.com:993"
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = "+Sent Messages"
+set trash = "+Deleted Messages"
+
+#send
+set smtp_url = "smtp://nicolashaigh@smtp.mail.me.com:587/"
+set smtp_pass = $my_pw_icloud
+set realname = "Nicolas Haigh"
+set from = "nicolashaigh@icloud.com"
+set hostname = icloud.com
+
+
+
+set imap_pipeline_depth=0
+
+#add mailboxes
+mailboxes =Inbox
+
+#configures status bar to display inbox name
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───icloud"
