@@ -7,9 +7,15 @@ source ~/.config/mutt/gmail
 auto_view text/html
 
 # alias settings
-set alias_file=~/.alias_list
-source $alias_file
+#set alias_file=~/.alias_list
+#source $alias_file
 
+set query_command= "khard email %s"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+macro index,pager A \
+    "<pipe-message>khard add-email<return>" \
+        "add the sender email address to khard"
 
 # # Change the following line to a different editor you prefer.
 #set editor = "nano -t"
