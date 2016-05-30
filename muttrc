@@ -7,9 +7,6 @@ source ~/.config/mutt/gmail
 auto_view text/html
 
 # alias settings
-#set alias_file=~/.alias_list
-#source $alias_file
-
 set query_command= "khard email %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
@@ -18,7 +15,6 @@ macro index,pager A \
         "add the sender email address to khard"
 
 # # Change the following line to a different editor you prefer.
-#set editor = "nano -t"
 #set editor = "vim -c 'set tw=80 ft=mail' -c 'set wrap' -c 'set nocp'"
 set editor="vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
 set text_flowed=yes
