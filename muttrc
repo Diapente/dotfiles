@@ -25,6 +25,8 @@ set mail_check = 120
 set timeout = 300
 set imap_keepalive = 300
 
+#for OSX
+set smtp_authenticators = 'gssapi:login'
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
@@ -84,9 +86,13 @@ color index     brightred       default '~F'    # Flagged Messages are important
 color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
 
 
-# url viewing
-macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+# url viewing - urlscan for linux
+#macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+#macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# urlview for OSx
+macro index,pager \cb "<pipe-message> urlview<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlview<Enter>" "call urlscan to extract URLs out of a message"
 
 # misc
 bind index,pager R "group-reply"
