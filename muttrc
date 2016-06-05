@@ -86,13 +86,10 @@ color index     brightred       default '~F'    # Flagged Messages are important
 color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
 
 
-# url viewing - urlscan for linux
-#macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-#macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+# url viewing - urlscan for linux - in OS X use iTerm2 and Cmd-Click
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
-# urlview for OSx
-macro index,pager \cb "<pipe-message> urlview<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlview<Enter>" "call urlscan to extract URLs out of a message"
 
 # misc
 bind index,pager R "group-reply"
