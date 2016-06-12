@@ -62,5 +62,5 @@ bindkey "${terminfo[kend]}" end-of-line
 bindkey "\e[3~" delete-char
 bindkey "${terminfo[kich1]}" quoted-insert
 
-# zsh-syntax-highlighting
+# zsh-syntax-highlighting for Linux
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
