@@ -1,5 +1,6 @@
 # basic .muttrc for use with Gmail
-#default account gmail
+# default account gmail
+# source password file
 source "gpg2 -dq $HOME/.my-pwds.gpg |"
 source ~/.config/mutt/gmail
 
@@ -20,12 +21,11 @@ set editor="vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
 set text_flowed=yes
 
 # Basic config
+
 set imap_check_subscribed=yes
 set mail_check = 120
 set timeout = 300
 set imap_keepalive = 300
-
-
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
