@@ -20,6 +20,7 @@ set hostname = icloud.com
 set imap_pipeline_depth=0
 
 #add mailboxes
+unset mailboxes
 mailboxes =Inbox
 
 #configures status bar to display inbox name

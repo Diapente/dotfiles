@@ -17,7 +17,7 @@ set trash="=Trash"
 
 #set ssl_force_tls = yes
 #set ssl_starttls = yes
-
+unset mailboxes
 mailboxes =Inbox =Drafts =Trash
 
 #configures status bar to display inbox name
