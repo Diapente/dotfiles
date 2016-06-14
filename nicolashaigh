@@ -1,0 +1,23 @@
+#nicolashaigh.co.uk
+
+set folder = "imaps://secureuk8.sgcpanel.com:993"
+set spoolfile = "+INBOX"
+set imap_user = "nicolas@nicolashaigh.co.uk"
+set imap_pass = $my_pw_nicolashaigh
+set smtp_url = "smtps://nicolas@nicolashaigh.co.uk@secureuk8.sgcpanel.com:465"
+set smtp_pass = $my_pw_nicolashaigh 
+set ssl_start_tls = yes
+set record = "+Sent"
+set realname = "Nicolas Haigh"
+set hostname = "nicolashaigh.co.uk"
+set postponed = "+Drafts"
+set trash = "+Trash"
+unset from
+set from "nicolas@nicolashaigh.co.uk"
+
+#set ssl_force_tls = yes
+unset mailboxes
+mailboxes =Inbox =Drafts =Trash
+
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───nicolashaigh"
+
