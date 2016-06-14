@@ -28,7 +28,7 @@ set timeout = 300
 set imap_keepalive = 300
 
 #for OSX
-set smtp_authenticators = 'gssapi:login'
+#set smtp_authenticators = 'gssapi:login'
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
