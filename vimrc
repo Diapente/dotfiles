@@ -1,3 +1,13 @@
+"vundle settings
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'jamessan/vim-gnupg'
+call vundle#end()
+
 "powerline settings
 let $PYTHONPATH='/usr/lib/python3.5/site-packages'
 "let $PYTHONPATH='/usr/lib/python3.5/site-packages/powerline/bindings/'
