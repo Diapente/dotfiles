@@ -10,7 +10,6 @@ set smtp_pass = $my_pw_gmail
 set realname = "Nicolas Haigh"
 set from = "haigh.nicolas@gmail.com"
 set hostname = gmail.com
-
 set postponed = "+[Google Mail]/Drafts"
 set record = "+[Google Mail]/Sent Mail"
 
