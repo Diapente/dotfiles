@@ -99,11 +99,11 @@ bind index <tab> sync-mailbox
 bind index gg first-entry
 
 #multiple account bindings
-macro index,pager <f2> "<sync-mailbox><enter-command>source ~/.config/mutt/gmail<enter><change-folder>!<enter>"
-macro index,pager <f3> "<sync-mailbox><enter-command>source ~/.config/mutt/cantab<enter><change-folder>!<enter>"
-macro index,pager <f4> "<sync-mailbox><enter-command>source ~/.config/mutt/icloud<enter><change-folder>!<enter>"
-macro index,pager <f5> "<sync-mailbox><enter-command>source ~/.config/mutt/cwru<enter><change-folder>!<enter>"
-
+macro index,pager <F2> "<sync-mailbox><enter-command>source ~/.config/mutt/gmail<enter><change-folder>!<enter>"
+macro index,pager <F3> "<sync-mailbox><enter-command>source ~/.config/mutt/cantab<enter><change-folder>!<enter>"
+macro index,pager <F4> "<sync-mailbox><enter-command>source ~/.config/mutt/icloud<enter><change-folder>!<enter>"
+macro index,pager <F5> "<sync-mailbox><enter-command>source ~/.config/mutt/cwru<enter><change-folder>!<enter>"
+macro index,pager <F6> "<sync-mailbox><enter-command>source ~/.config/mutt/nicolashaigh<enter><change-folder>!<enter>"
 
 
 #hooks to load multiple accounts
@@ -111,7 +111,7 @@ folder-hook 'gmail.com' 'source ~/.config/mutt/gmail'
 folder-hook 'cantab.net' 'source ~/.config/mutt/cantab'
 folder-hook 'icloud.com' 'source ~/.config/mutt/icloud'
 folder-hook 'case.edu' 'source ~/.config/mutt/cwru'
-
+folder-hook 'nicolashaigh.co.uk' 'source ~/.config/mutt/nicolashaigh'
 # mutt sidebar settings
 bind index,pager \Cp sidebar-prev
 bind index,pager \Cn sidebar-next
