@@ -38,6 +38,11 @@ au FileType py set textwidth=79 " PEP-8 Friendly
 set number
 set autoindent
 
+" keybinds
+"move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
 "settings for mutt
 au BufRead /tmp/mutt-* set tw=72
 
