@@ -20,9 +20,9 @@ set guifont=SourceCodePro
 set noshowmode
 
 "set python tabs
-set tabstop=4
+set tabstop=4 " number of visual spaces per tab
 set shiftwidth=4
-set expandtab
+set expandtab " turns tabs into spaces
 
 "syntax highlighting
 syntax on
