@@ -6,7 +6,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jamessan/vim-gnupg'
+Plugin 'sjl/badwolf' "this line installs a colorscheme
 call vundle#end()
+
 
 "powerline settings
 let $PYTHONPATH='/usr/lib/python3.5/site-packages'
@@ -18,6 +20,8 @@ set termencoding=utf-8
 let g:airline_powerline_fonts=1
 set guifont=SourceCodePro
 set noshowmode
+
+colorscheme badwolf "sets colorscheme called in plugin 
 
 "set python tabs
 set tabstop=4 " number of visual spaces per tab
