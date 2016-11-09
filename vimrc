@@ -38,15 +38,11 @@ set gdefault "when substituting with the form :%s/foo/bar it now replaces every 
 "move vertically by visual line
 nnoremap j gj
 nnoremap k gk
-nnoremap <up> <nop> "the followings disable the arrow keys
+let mapleader = "," "changes leader key to comma
+nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-let mapleader = "," "changes leader key to comma
 
 "remap splits navigation
 nnoremap <C-h> <C-w>h
