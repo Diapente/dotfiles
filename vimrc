@@ -27,6 +27,11 @@ colorscheme badwolf "sets colorscheme called in plugin
 set number
 set autoindent
 set relativenumber "changes lh line numbering to relative
+set ignorecase "search ignores case when using lowercase
+set smartcase "search follows uppercase as case-sensitive
+set incsearch "these three lines work to highlight search results
+set showmatch
+set hlsearch
 
 " keybinds
 "move vertically by visual line
