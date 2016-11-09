@@ -36,7 +36,6 @@ set gdefault "when substituting with the form :%s/foo/bar it now replaces every 
 
 " keybinds
 "move vertically by visual line
-let mapleader = "," "changes leader key to comma
 nnoremap j gj
 nnoremap k gk
 nnoremap <up> <nop> "the followings disable the arrow keys
@@ -47,7 +46,13 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+let mapleader = "," "changes leader key to comma
 
+"remap splits navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 "save all open buffers when focus is lost
 au FocusLost * :wa
 
