@@ -1,5 +1,5 @@
 "vundle settings
-set nocompatible
+set nocompatible "removes backwards compatibility with vi
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -12,8 +12,7 @@ call vundle#end()
 
 "powerline settings
 let $PYTHONPATH='/usr/lib/python3.5/site-packages'
-"let $PYTHONPATH='/usr/lib/python3.5/site-packages/powerline/bindings/'
-set laststatus=2
+set laststatus=2 "removes default vim status line
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 set termencoding=utf-8
@@ -21,11 +20,24 @@ let g:airline_powerline_fonts=1
 set guifont=SourceCodePro
 set noshowmode
 
+"colorscheme settings
 colorscheme badwolf "sets colorscheme called in plugin 
+
+"usability settings
+set number
+set autoindent
+set relativenumber "changes lh line numbering to relative
+
+" keybinds
+"move vertically by visual line
+let mapleader = "," "changes leader key to comma
+nnoremap j gj
+nnoremap k gk
 
 "set python tabs
 set tabstop=4 " number of visual spaces per tab
 set shiftwidth=4
+set softtabstop=4
 set expandtab " turns tabs into spaces
 
 "syntax highlighting
@@ -39,13 +51,7 @@ au FileType py set smartindent
 au FileType py set textwidth=79 " PEP-8 Friendly
 
 "toggle lh line numbers & automatic indenting for all filetypes
-set number
-set autoindent
 
-" keybinds
-"move vertically by visual line
-nnoremap j gj
-nnoremap k gk
 
 "settings for mutt
 au BufRead /tmp/mutt-* set tw=72
