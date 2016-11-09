@@ -32,12 +32,24 @@ set smartcase "search follows uppercase as case-sensitive
 set incsearch "these three lines work to highlight search results
 set showmatch
 set hlsearch
+set gdefault "when substituting with the form :%s/foo/bar it now replaces every occurence on the line
 
 " keybinds
 "move vertically by visual line
 let mapleader = "," "changes leader key to comma
 nnoremap j gj
 nnoremap k gk
+nnoremap <up> <nop> "the followings disable the arrow keys
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+"save all open buffers when focus is lost
+au FocusLost * :wa
 
 "set python tabs
 set tabstop=4 " number of visual spaces per tab
