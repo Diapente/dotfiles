@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jamessan/vim-gnupg'
-Plugin 'sjl/badwolf' "this line installs a colorscheme
+Plugin 'nanotech/jellybeans.vim'
 call vundle#end()
 
 
@@ -21,7 +21,10 @@ set guifont=SourceCodePro
 set noshowmode
 
 "colorscheme settings
-colorscheme badwolf "sets colorscheme called in plugin 
+colorscheme jellybeans "this sets the colorscheme'
+let g:jellybeans_overrides = {
+            \   'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+            \}
 
 "usability settings
 set number
@@ -73,4 +76,3 @@ au FileType py set textwidth=79 " PEP-8 Friendly
 
 "settings for mutt
 au BufRead /tmp/mutt-* set tw=72
-
