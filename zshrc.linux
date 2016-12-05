@@ -9,6 +9,10 @@ bindkey -v
 zstyle :compinstall filename '/home/nicolas/.zshrc'
 zstyle ':completion:*' menu select
 
+
+#autocompletion script directory
+fpath=(~/.zsh/completion $fpath)
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -16,11 +20,13 @@ compinit
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
 # Prompt Config
 # the following line controls colors on Linux (not OS X)
 autoload -Uz colors && colors
 PROMPT='[%n@%m:%~]→ '
 #PROMPT="%{$fg[yellow]%}%n%{$reset_color%}@%{$fg[magenta]%}%m %{$fg_no_bold[yellow]%}%1~ %{$reset_color%}%# "
+
 # Aliases
 
 # for Linux (not OS X)
@@ -30,8 +36,14 @@ alias ls='ls --color=auto'
 alias usb='udiskie-mount /dev/disk/by-uuid/D0D0-C062'
 alias umusb='udiskie-umount /dev/disk/by-uuid/D0D0-C062'
 
+#start ncmpcpp for pi control (rather than local)
+alias pincmpcpp='ncmpcpp -c ~/.config/ncmpcpp/piconfig'
+
 #scan script (~/Pictures/Wallpapers)
 alias scanbg='~/.config/cwallpaper/makeList.sh'
+
+#set desk layout
+alias external='~/.screenlayout/External.sh && ~/.fehbg'
 
 #mutt background fix for Linux
 COLORFGBG="default;default"
