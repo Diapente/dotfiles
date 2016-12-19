@@ -3,6 +3,7 @@ set nocompatible "removes backwards compatibility with vi
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jamessan/vim-gnupg'
@@ -36,6 +37,7 @@ set incsearch "these three lines work to highlight search results
 set showmatch
 set hlsearch
 set gdefault "when substituting with the form :%s/foo/bar it now replaces every occurence on the line
+set clipboard=unnamedplus "sets the x clipboard as the default clipboard
 
 " keybinds
 "move vertically by visual line
