@@ -52,7 +52,7 @@ alias external='~/.screenlayout/External.sh && ~/.fehbg'
 COLORFGBG="default;default"
 
 #terminal 256 colors for Linux
-export TERM=rxvt
+#export TERM=rxvt
 
 #Titlebar completion for Linux (not OS X)
 case $TERM in
