@@ -91,6 +91,13 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab " turns tabs into spaces
 
+"configure python to have an comment shortcut
+autocmd FileType python let maplocalleader = ","
+autocmd FileType vim let maplocalleader = ","
+autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+autocmd FileType vim nnoremap <buffer> <localleader>c I"<esc>
+
+
 "syntax highlighting
 syntax on
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
