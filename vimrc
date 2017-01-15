@@ -8,11 +8,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 
 "powerline settings
-let $PYTHONPATH='/usr/lib/python3.5/site-packages'
+let $PYTHONPATH='/usr/lib/python3.6/site-packages'
 set laststatus=2 "removes default vim status line
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
@@ -57,11 +58,30 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+"open .vimrc in new split for editing
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"source the newly edited .vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"surround a word with ()
+nnoremap <leader>( viw<esc>a)<esc>hbi(<esc>lec
+nnoremap <leader>) viw<esc>a)<esc>hbi(<esc>lec
+
+"remap esc to jk
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+"go to beginning of line
+nnoremap H ^
+"go to end of line
+nnoremap L $
+
 "remap splits navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
 "save all open buffers when focus is lost
 au FocusLost * :wa
 
