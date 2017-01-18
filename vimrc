@@ -69,7 +69,7 @@ nnoremap <leader>) viw<esc>a)<esc>hbi(<esc>lec
 
 "remap esc to jk
 inoremap jk <esc>
-inoremap <esc> <nop>
+"inoremap <esc> <nop>
 
 "go to beginning of line
 nnoremap H ^
@@ -82,6 +82,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"remaps space to open close folds
+set foldmethod=indent
+nnoremap <space> za
+vnoremap <space> zf
+
 "save all open buffers when focus is lost
 au FocusLost * :wa
 
@@ -93,8 +98,8 @@ set expandtab " turns tabs into spaces
 
 "configure python to have an comment shortcut
 autocmd FileType python let maplocalleader = ","
-autocmd FileType vim let maplocalleader = ","
 autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+autocmd FileType vim let maplocalleader = ","
 autocmd FileType vim nnoremap <buffer> <localleader>c I"<esc>
 
 
@@ -104,6 +109,7 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set statusline=%F%m%r%h%w\ [FILETYPE=%Y\ %{&ff}]\
 \ [%l/%L\ (%p%%)
 filetype plugin indent on
+"python settings
 au FileType py set autoindent
 au FileType py set smartindent
 au FileType py set textwidth=79 " PEP-8 Friendly
