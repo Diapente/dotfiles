@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
 
@@ -63,13 +64,23 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 "source the newly edited .vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"open NERDTree
+nmap <leader>n :NERDTree<cr>
+
 "surround a word with ()
 nnoremap <leader>( viw<esc>a)<esc>hbi(<esc>lec
 nnoremap <leader>) viw<esc>a)<esc>hbi(<esc>lec
 
-"remap esc to jk
+"surround a word with[]
+nnoremap <leader>[ viw<esc>a]<esc>hbi[<esc>lec
+nnoremap <leader>] viw<esc>a]<esc>hbi[<esc>lec
+
+"surround a word with {}
+nnoremap <leader>{ viw<esc>a}<esc>hbi{<esc>lec
+nnoremap <leader>} viw<esc>a}<esc>hbi{<esc>lec
+
+"remap jk to esc
 inoremap jk <esc>
-"inoremap <esc> <nop>
 
 "go to beginning of line
 nnoremap H ^
@@ -84,6 +95,7 @@ nnoremap <C-l> <C-w>l
 
 "remaps space to open close folds
 set foldmethod=indent
+set foldlevelstart=99
 nnoremap <space> za
 vnoremap <space> zf
 
