@@ -34,7 +34,7 @@ alias umusb='udiskie-umount /dev/disk/by-uuid/D0D0-C062'
 alias scanbg='~/.config/cwallpaper/makeList.sh'
 
 #mutt background fix for Linux (not OS X)
-COLORFGBG="default;default"
+#COLORFGBG="default;default"
 
 #terminal 256 colors for Linux (not OS X)
 #export TERM=rxvt
@@ -58,13 +58,14 @@ COLORFGBG="default;default"
 #                                                                                                                            esac
 
 #keybindings
-bindkey "${terminfo[khome]}" beginning-of-line
-bindkey "${terminfo[kend]}" end-of-line
-bindkey "\e[3~" delete-char
-bindkey "${terminfo[kich1]}" quoted-insert
+#bindkey "${terminfo[khome]}" beginning-of-line
+#bindkey "${terminfo[kend]}" end-of-line
+#bindkey "\e[3~" delete-char
+#bindkey "${terminfo[kich1]}" quoted-insert
 
 # zsh-syntax-highlighting for Linux
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zsh-syntax-highlighting for OSX
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/openssl/bin:$PATH"
