@@ -42,6 +42,9 @@ alias umusb='udiskie-umount /dev/disk/by-uuid/D0D0-C062'
 #start ncmpcpp for pi control (rather than local)
 alias pincmpcpp='ncmpcpp -c ~/.config/ncmpcpp/piconfig'
 
+#sync music from archtp to alarmpi (on local network)
+alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/'
+
 #scan script (~/Pictures/Wallpapers)
 alias scanbg='~/.config/cwallpaper/makeList.sh'
 
