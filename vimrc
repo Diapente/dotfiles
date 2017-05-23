@@ -10,6 +10,7 @@ Plugin 'jamessan/vim-gnupg'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
 
