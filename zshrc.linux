@@ -87,5 +87,7 @@ bindkey "${terminfo[kich1]}" quoted-insert
 # zsh-syntax-highlighting for Linux
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+#configure ctrl-shift-t to launch in current dir
+source /etc/profile.d/vte.sh
 # zsh-syntax-highlighting for OSX
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
