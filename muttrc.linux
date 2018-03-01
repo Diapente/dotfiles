@@ -8,12 +8,17 @@ source ~/.config/mutt/gmail
 auto_view text/html
 
 # alias settings
-set query_command= "khard email --parsable %s"
+#set query_command= "khard email --parsable %s"
+#bind editor <Tab> complete-query
+#bind editor ^T    complete
+#macro index,pager a \
+#    "<pipe-message>khard add-email<return>" \
+#        "add the sender email address to khard"
+## GooBook
+set query_command="goobook query '%s'"
+macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
 bind editor <Tab> complete-query
-bind editor ^T    complete
-macro index,pager a \
-    "<pipe-message>khard add-email<return>" \
-        "add the sender email address to khard"
+
 
 # # Change the following line to a different editor you prefer.
 #set editor = "vim -c 'set tw=80 ft=mail' -c 'set wrap' -c 'set nocp'"
