@@ -83,6 +83,9 @@ bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 bindkey "\e[3~" delete-char
 bindkey "${terminfo[kich1]}" quoted-insert
+#for archdesktop
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # zsh-syntax-highlighting for Linux
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
