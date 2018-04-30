@@ -35,15 +35,23 @@ PROMPT='[%n@%m:%~]→ '
 # for Linux (not OS X)
 alias ls='ls --color=auto'
 
+# automatically sync calendars when ikhal exits
+alias ikhal='ikhal && vdirsyncer sync'
+
 #mounting keychain usb
 alias usb='udiskie-mount /dev/disk/by-uuid/D0D0-C062'
 alias umusb='udiskie-umount /dev/disk/by-uuid/D0D0-C062'
+
+#custom config for goobook
+alias goobook='goobook -c ~/.config/goobook/goobookrc'
 
 #start ncmpcpp for pi control (rather than local)
 alias pincmpcpp='ncmpcpp -c ~/.config/ncmpcpp/piconfig'
 
 #sync music from archtp to alarmpi (on local network)
-alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/'
+#alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
+alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
+alias playlistsync='rsync -rtvuh --no-owner --no-group  --delete /data/mpd/playlists/ alarm@alarmpi:/data/mpd/playlists/ && echo "Now update the remote mpd database"'
 
 #scan script (~/Pictures/Wallpapers)
 alias scanbg='~/.config/cwallpaper/makeList.sh'
@@ -83,6 +91,8 @@ bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 bindkey "\e[3~" delete-char
 bindkey "${terminfo[kich1]}" quoted-insert
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
 
 # zsh-syntax-highlighting for Linux
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
