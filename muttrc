@@ -9,7 +9,7 @@ source ~/.config/mutt/gmail
 auto_view text/html
 
 # alias settings
-set query_command= "khard email %s"
+set query_command= "khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
 macro index,pager A \
@@ -29,7 +29,7 @@ set timeout = 300
 set imap_keepalive = 300
 
 #for OSX
-set smtp_authenticators = 'gssapi:login'
+#set smtp_authenticators = 'gssapi:login'
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
@@ -52,7 +52,7 @@ bind editor <space> noop
 
 
 # Status Bar -----------------------------------------
-set status_chars  = " *%A"
+#set status_chars  = " *%A"
 
 
 
@@ -92,6 +92,7 @@ macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract 
 # misc
 bind index,pager R "group-reply"
 bind index <tab> sync-mailbox
+bind index g noop
 bind index gg first-entry
 
 #multiple account bindings
@@ -109,10 +110,10 @@ folder-hook 'icloud.com' 'source ~/.config/mutt/icloud'
 folder-hook 'case.edu' 'source ~/.config/mutt/cwru'
 folder-hook 'nicolashaigh.co.uk' 'source ~/.config/mutt/nicolashaigh'
 # mutt sidebar settings
-bind index,pager \Cp sidebar-prev
-bind index,pager \Cn sidebar-next
-bind index,pager \Co sidebar-open
-macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+#bind index,pager \Cp sidebar-prev
+#bind index,pager \Cn sidebar-next
+#bind index,pager \Co sidebar-open
+#macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
 
 #forwarding settings
 unset mime_forward                   # forward attachments as part of body

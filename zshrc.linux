@@ -93,6 +93,8 @@ bindkey "\e[3~" delete-char
 bindkey "${terminfo[kich1]}" quoted-insert
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # zsh-syntax-highlighting for Linux
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
