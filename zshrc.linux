@@ -50,8 +50,13 @@ alias pincmpcpp='ncmpcpp -c ~/.config/ncmpcpp/piconfig'
 
 #sync music from archtp to alarmpi (on local network)
 #alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
-alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
-alias playlistsync='rsync -rtvuh --no-owner --no-group  --delete /data/mpd/playlists/ alarm@alarmpi:/data/mpd/playlists/ && echo "Now update the remote mpd database"'
+alias pimusicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
+alias piplaylistsync='rsync -rtvuh --no-owner --no-group  --delete /data/mpd/playlists/ alarm@alarmpi:/data/mpd/playlists/ && echo "Now update the remote mpd database"'
+
+#sync music from archtp to archdesktop (on local network)
+alias archdesktopmusicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ nicolas@archdesktop:/data/mpd/music/ && echo "Now update the remote mpd database"'
+
+
 
 #scan script (~/Pictures/Wallpapers)
 alias scanbg='~/.config/cwallpaper/makeList.sh'
