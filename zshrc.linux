@@ -50,7 +50,7 @@ alias pincmpcpp='ncmpcpp -c ~/.config/ncmpcpp/piconfig'
 
 #sync music from archtp to alarmpi (on local network)
 #alias musicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
-alias pimusicsync='rsync -rtvuh --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
+alias pimusicsync='rsync -rtvuh --rsh="ssh -p 2222" --no-owner --no-group  --delete ~/data/music/ alarm@alarmpi:/data/Music/ && echo "Now update the remote mpd database"'
 alias piplaylistsync='rsync -rtvuh --no-owner --no-group  --delete /data/mpd/playlists/ alarm@alarmpi:/data/mpd/playlists/ && echo "Now update the remote mpd database"'
 
 #sync music from archtp to archdesktop (on local network)
