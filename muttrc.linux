@@ -13,8 +13,8 @@ set query_command= "khard email --parsable %s"
 #bind editor <Tab> complete-query
 bind editor ^T    complete
 macro index,pager a \
-#    "<pipe-message>khard add-email<return>" \
-#        "add the sender email address to khard"
+    "<pipe-message>khard add-email<return>" \
+        "add the sender email address to khard"
 ## GooBook
 #set query_command="goobook query '%s'"
 #macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
