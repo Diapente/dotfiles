@@ -6,6 +6,7 @@ source "gpg2 -dq $HOME/.my-pwds.gpg |"
 source ~/.config/mutt/gmail
 
 # mailcap settings
+set mailcap_path = "~/.mailcap"
 auto_view text/html
 
 # alias settings
