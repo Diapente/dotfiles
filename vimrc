@@ -12,7 +12,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'matze/vim-lilypond'
+Plugin 'sjl/gundo.vim'
 call vundle#end()
+
 
 
 "powerline settings
@@ -30,8 +32,9 @@ colorscheme jellybeans "this sets the colorscheme'
 let g:jellybeans_overrides = {
             \   'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
             \}
-
+"
 "usability settings
+"
 set number
 set autoindent
 set relativenumber "changes lh line numbering to relative
@@ -100,6 +103,9 @@ set foldmethod=indent
 set foldlevelstart=99
 nnoremap <space> za
 vnoremap <space> zf
+
+"gundo
+nnoremap <F5> :GundoToggle<CR>
 
 "save all open buffers when focus is lost
 au FocusLost * :wa
