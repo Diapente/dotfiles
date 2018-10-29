@@ -105,7 +105,7 @@ nnoremap <space> za
 vnoremap <space> zf
 
 "gundo
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>g :GundoToggle<CR>
 
 "save all open buffers when focus is lost
 au FocusLost * :wa
