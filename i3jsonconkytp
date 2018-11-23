@@ -1,0 +1,53 @@
+#alignment top_left
+#background no
+#border_width 1
+cpu_avg_samples 2
+default_color white
+#default_outline_color white
+#default_shade_color white
+#draw_borders no
+#draw_graph_borders yes
+#draw_outline no
+#draw_shades no
+#use_xft yes
+#xftfont DejaVu Sans Mono:size=12
+
+#minimum_size 5 5
+#net_avg_samples 2
+no_buffers yes
+out_to_console yes
+out_to_stderr no
+out_to_x no
+extra_newline no
+own_window no
+#own_window_class Conky
+#own_window_type desktop
+#stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+#show_graph_scale no
+#show_graph_range no
+total_run_times 0
+short_units yes
+
+#networkmpd
+#mpd_host raspberrypi
+#mpd_port 6600
+
+TEXT
+[
+    
+	{"full_text": " ${wireless_essid} ${downspeed wlp3s0}/s ${upspeed wlp3s0}/s" },
+	{"full_text": " ${loadavg}" },
+	{"full_text": " ${mem}/${memmax} ${memperc}%  ${swap}" },
+	{"full_text": "/ ${fs_free}" },
+	{"full_text": "${if_mounted /dev/disk/by-uuid/0971451f-6bd7-4578-bb6d-952c5e407b00} /data ${fs_free /data}" } ,
+	{"full_text": " ${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${freq_g}Ghz ${acpitemp}º" },
+	{"full_text": "${if_match ${battery_percent}<=10}${else}${if_match ${battery_percent}<=35}${else}${if_match ${battery_percent}<=60}${else}${if_match ${battery_percent}<=80}${else}${if_match ${battery_percent}<=100}${endif}${endif}${endif}${endif}${endif} ${battery_percent}% ${battery_time BAT0}" , "color":${if_match ${battery_percent}<10}"\#ff0000"${else}"\#FFFFFF"${endif} },
+   	{"full_text": "${execi 300 ~/.config/i3/weather.sh 28211}"},
+    {"full_text": "${if_mpd_playing} ${if_match "${mpd_status}"== "Playing"}${else}${if_match "${mpd_status}" == "Paused}${endif}${endif}${endif}" , "color":${if_match "${mpd_status}"=="Paused"}"\#ff0000"${else}"\#FFFFFF"${endif} }, 
+    {"full_text": "${if_mpd_playing}${mpd_title} ${mpd_percent}%${endif}"},
+   	#{"full_text": "${execi 300 ~/.config/i3/update.sh}"},
+	{"full_text": "${time %m/%d/%y // %H:%M:%S}"}
+],
