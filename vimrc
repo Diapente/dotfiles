@@ -135,6 +135,9 @@ au FileType py set smartindent
 au FileType py set textwidth=79 " PEP-8 Friendly
 au BufRead,BufNewFile *.gabc set filetype=gabc
 
+"this command configures F5 to save and recompile in tex documents
+autocmd FileType tex map <f5> :w<enter>:! lualatex %<enter>
+
 "toggle lh line numbers & automatic indenting for all filetypes
 
 
