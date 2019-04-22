@@ -13,6 +13,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'matze/vim-lilypond'
 Plugin 'sjl/gundo.vim'
+Plugin 'mhinz/vim-signify'
 call vundle#end()
 
 
