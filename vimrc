@@ -136,7 +136,7 @@ au FileType py set textwidth=79 " PEP-8 Friendly
 au BufRead,BufNewFile *.gabc set filetype=gabc
 
 "this command configures F5 to save and recompile in tex documents
-autocmd FileType tex map <f5> :w<enter>:! lualatex %<enter>
+autocmd FileType tex map <f5> :w<enter>:! lualatex %<enter>:! zathura *.pdf<enter>
 
 "toggle lh line numbers & automatic indenting for all filetypes
 
