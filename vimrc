@@ -19,7 +19,7 @@ call vundle#end()
 
 
 "powerline settings
-let $PYTHONPATH='/usr/lib/python3.7/site-packages'
+let $PYTHONPATH='/usr/lib/python3.8/site-packages'
 set laststatus=2 "removes default vim status line
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
