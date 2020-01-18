@@ -1,5 +1,6 @@
 "vundle settings
 set nocompatible "removes backwards compatibility with vi
+set backspace=indent,eol,start " more powerful backspacing
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
