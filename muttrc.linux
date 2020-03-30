@@ -102,7 +102,7 @@ macro index,pager <f3> "<sync-mailbox><enter-command>source ~/.config/mutt/canta
 macro index,pager <f4> "<sync-mailbox><enter-command>source ~/.config/mutt/icloud<enter><change-folder>!<enter>"
 macro index,pager <f5> "<sync-mailbox><enter-command>source ~/.config/mutt/cwru<enter><change-folder>!<enter>"
 macro index,pager <f6> "<sync-mailbox><enter-command>source ~/.config/mutt/nicolashaigh<enter><change-folder>!<enter>"
-macro index,pager <f7> "<sync-mailbox><enter-command>source ~/.config/mutt/chch<enter><change-folder>!<enter>"
+macro index,pager <f7> "<sync-mailbox><enter-command>source ~/.config/mutt/stt<enter><change-folder>!<enter>"
 
 #hooks to load multiple accounts
 folder-hook 'gmail.com' 'source ~/.config/mutt/gmail'
@@ -110,7 +110,8 @@ folder-hook 'cantab.net' 'source ~/.config/mutt/cantab'
 folder-hook 'icloud.com' 'source ~/.config/mutt/icloud'
 folder-hook 'case.edu' 'source ~/.config/mutt/cwru'
 folder-hook 'nicolashaigh.co.uk' 'source ~/.config/mutt/nicolashaigh'
-folder-hook 'christchurchcharlotte.org' 'source ~/.config/mutt/chch'
+folder-hook 'case.edu' 'source ~/.config/mutt/cwru'
+folder-hook 'saintthomaschurch.org' 'source ~/.config/mutt/stt'
 
 # mutt sidebar settings
 bind index,pager \Cp sidebar-prev
