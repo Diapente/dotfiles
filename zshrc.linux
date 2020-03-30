@@ -70,6 +70,9 @@ alias external='~/.screenlayout/External.sh && ~/.fehbg'
 #launch mplayer for home network
 alias pimplayer='mplayer -ao pulse http://raspberrypi:8010/mpd.ogg'
 
+#launch pron
+alias pron='feh --scale-down --auto-zoom ~/data/photos/Linux\ files'
+
 #mutt background fix for Linux
 COLORFGBG="default;default"
 
