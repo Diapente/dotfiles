@@ -17,6 +17,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'vlime/vlime'
 Plugin 'kovisoft/paredit'
+Plugin 'junegunn/rainbow_parentheses.vim'
 call vundle#end()
 
 
@@ -144,6 +145,7 @@ autocmd FileType tex map <f5> :w<enter>:! lualatex %<enter>:! zathura *.pdf<ente
 
 "toggle lh line numbers & automatic indenting for all filetypes
 
-
+"
+au FileType lisp RainbowParentheses
 "settings for mutt
 au BufRead /tmp/mutt-* set tw=72
