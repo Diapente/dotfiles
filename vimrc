@@ -18,6 +18,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'vlime/vlime'
 Plugin 'kovisoft/paredit'
 Plugin 'junegunn/rainbow_parentheses.vim'
+Plugin 'sjl/badwolf'
 call vundle#end()
 
 
@@ -37,6 +38,9 @@ colorscheme jellybeans "this sets the colorscheme'
 let g:jellybeans_overrides = {
             \   'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
             \}
+
+"colorscheme badwolf
+"
 "
 "usability settings
 "
